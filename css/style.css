@@ -1,0 +1,133 @@
+*, *::after, ::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    counter-reset: score;
+    background-image: url("../img/03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    cursor: url(../img/free-icon-crosshair-334323.png), auto
+    
+}
+
+.monstr input{
+    position: absolute;
+    left: -80px;
+}
+
+.monstr input:checked{
+    counter-increment: score;
+}
+
+.monstr input:checked + label{
+    display: none;
+}
+
+.count{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.count::after{
+    content:counter(score)
+}
+
+.monstr1 label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/monstr1.png");
+    background-repeat: no-repeat;  
+    cursor: url(../img/free-icon-crosshair-334323.png), auto  
+}
+
+.monstr1{
+    width: 50px;
+    height: 74px;
+    position: relative;
+    overflow: hidden;
+    left: -10%;
+    top: 300px;
+    animation: fly1 ease 8s;
+}
+
+@keyframes fly1{
+    0%{left: -10%;}
+    25%{left: 25%;top: 150px;transform: rotate(180deg);}
+    50%{left: 60%;top: 550px;}
+    75%{left: 80%;top: 100px;}
+    100%{left: 110%;top: 300px;}
+}
+
+.monstr2 label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/monstr2.png");
+    background-repeat: no-repeat;  
+    cursor: url(../img/free-icon-crosshair-334323.png), auto  
+}
+
+.monstr2{
+    width: 70px;
+    height: 72px;
+    position: relative;
+    overflow: hidden;
+    left: -10%;
+    top: 400px;
+    animation: fly2 ease 10s;
+}
+
+@keyframes fly2{
+    0%{left: -20%;}
+    25%{left: 35%;top: 250px;transform: rotate(180deg);}
+    50%{left: 50%;top: 450px;}
+    75%{left: 70%;top: 150px;}
+    100%{left: 210%;top: 200px;}
+}
+
+.monstr3 label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/monstr3.png");
+    background-repeat: no-repeat; 
+    cursor: url(../img/free-icon-crosshair-334323.png), auto   
+}
+
+.monstr3{
+    width: 75px;
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    left: -10%;
+    top: 400px;
+    animation: fly3 ease 12s;
+}
+
+@keyframes fly3{
+    0%{left: -30%;}
+    25%{left: 15%;top: 50px;transform: rotate(180deg);}
+    50%{left: 40%;top: 150px;}
+    75%{left: 60%;top: 250px;}
+    100%{left: 110%;top: 250px;}
+}
+
